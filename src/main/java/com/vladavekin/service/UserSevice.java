@@ -3,7 +3,6 @@ package com.vladavekin.service;
 import com.vladavekin.domain.Role;
 import com.vladavekin.domain.User;
 import com.vladavekin.repos.UserRepo;
-import freemarker.template.utility.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -20,7 +19,7 @@ public class UserSevice implements UserDetailsService {
     private UserRepo userRepo;
 
     @Autowired
-    private MailSander mailSander;
+    private MailSender mailSender;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -54,7 +53,7 @@ public class UserSevice implements UserDetailsService {
                     user.getActivationCode()
             );
 
-            mailSander.send(user.getEmail(), "Activation code", message);
+            mailSender.send(user.getEmail(), "Activation code", message);
         }
     }
 

@@ -36,14 +36,20 @@ public class MailConfig {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
 
         mailSender.setHost(host);
+        mailSender.setPort(port);
         mailSender.setUsername(username);
         mailSender.setPassword(password);
-        mailSender.setPort(port);
 
         Properties properties = mailSender.getJavaMailProperties();
+
         properties.setProperty("mail.transport.protocol", protocol);
         properties.setProperty("mail.debug", debug);
+        properties.put("mail.smtp.host", host);
+        properties.put("mail.smtp.port", port);
+        properties.put("mail.smtp.auth", "true");
+        properties.put("mail.smtp.starttls.enable", "true");
 
         return mailSender;
     }
+
 }

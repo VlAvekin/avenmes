@@ -23,7 +23,8 @@ public class RegistrationController {
     }
 
     @PostMapping("/registration")
-    public String addUser(User user, Map<String, Object> model) {
+    public String addUser(User user,
+                          Map<String, Object> model) {
 
         if (!userSevice.addUser(user)) {
             model.put("message", "User exists!");
@@ -34,7 +35,8 @@ public class RegistrationController {
     }
 
     @GetMapping("/activate/{code}")
-    public String activate(Model model, @PathVariable String code) {
+    public String activate(Model model,
+                           @PathVariable String code) {
         boolean isActivate = userSevice.activateUser(code);
 
         if (isActivate) {
