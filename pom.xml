@@ -54,12 +54,10 @@
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
 
-        <!-- flywaydb fix BD -->
-        <!--
+        <!-- flywaydb fix BD
         <dependency>
              <groupId>org.flywaydb</groupId>
              <artifactId>flyway-core</artifactId>
-             <version>5.1.4</version>
          </dependency>
         -->
 
