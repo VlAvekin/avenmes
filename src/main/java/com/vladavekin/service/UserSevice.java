@@ -77,7 +77,6 @@ public class UserSevice implements UserDetailsService {
         }
 
         user.setActivationCode(null);
-
         userRepo.save(user);
 
         return true;
