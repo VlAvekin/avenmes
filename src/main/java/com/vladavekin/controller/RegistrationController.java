@@ -24,7 +24,7 @@ import java.util.Map;
 @Controller
 public class RegistrationController {
 
-    private final static String CAPTCHA_URL = "https://www.google.com/recaptcha/api/siteverify?secret=%s&response";
+    private final static String CAPTCHA_URL = "https://www.google.com/recaptcha/api/siteverify?secret=%s&response=%s";
 
     @Autowired
     private UserSevice userSevice;
@@ -48,6 +48,7 @@ public class RegistrationController {
                           Model model) {
 
         String url = String.format(CAPTCHA_URL, secret, captchaResponse);
+
         CaptchaResponseDto response =
                 restTemplate.postForObject(url, Collections.emptyList(), CaptchaResponseDto.class);
 
