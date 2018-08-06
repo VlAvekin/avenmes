@@ -48,7 +48,7 @@
         </form>
     </div>
 </div>
-<div class="card-deck">
+<div class="card-columns">
     <#list messages as message>
         <div class="card my-3">
         <#if message.filename??>
