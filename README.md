@@ -2,22 +2,22 @@
 This is a simple clone off Twitter
 
 Home
-![Home](image/1.png)
+![Home](image/a1.png)
 
 Sign In
-![Sign In](image/2.png)
+![Sign In](image/a2.png)
 
 Registration
-![Registration](image/3.png)
+![Registration](image/a3.png)
 
 Messages
-![Home](image/4.png)
+![Home](image/a4.png)
 
 User list
-![Sign In](image/5.png)
+![Sign In](image/a5.png)
 
 User editor
-![Registration](image/6.png)
+![Registration](image/a6.png)
 
 Profile
-![Registration](image/7.png)
+![Registration](image/a7.png)
