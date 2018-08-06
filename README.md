@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Avenmes
 This is a simple clone off Twitter
 
@@ -21,3 +22,6 @@ User editor
 
 Profile
 ![Registration](image/a7.png)
+=======
+# avenmes
+>>>>>>> origin/master
