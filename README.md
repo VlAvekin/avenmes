@@ -2,8 +2,11 @@
 This is a simple clone off Twitter
 
 Technologies:
+
 Framework: Spring (boot, data, security, mail)
+
 Database: JDBC, flyway, JPA, Hibernate
+
 WEB: Freemarker, HTML, Bootstrap
 
 Home
