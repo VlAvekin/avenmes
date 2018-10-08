@@ -35,11 +35,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+        <!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>1.4.197</version>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.1.1</version>
         </dependency>
 
         <!-- security -->
@@ -54,12 +55,12 @@
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
 
-        <!-- flywaydb fix BD
+        <!-- flywaydb fix BD -->
         <dependency>
-             <groupId>org.flywaydb</groupId>
-             <artifactId>flyway-core</artifactId>
-         </dependency>
-         -->
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+            <version>5.2.0</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.session</groupId>
@@ -91,25 +92,13 @@
      </properties>
 
 
-     <build>
-         <plugins>
-             <plugin>
-                 <groupId>org.springframework.boot</groupId>
-                 <artifactId>spring-boot-maven-plugin</artifactId>
-             </plugin>
-             <plugin>
-                 <groupId>org.flywaydb</groupId>
-                 <artifactId>flyway-maven-plugin</artifactId>
-                 <version>5.1.4</version>
-                 <configuration>
-
-                     <locations>
-                         <location>classpath:db/migration</location>
-                     </locations>
-                 </configuration>
-             </plugin>
-         </plugins>
-
-     </build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
  </project>
